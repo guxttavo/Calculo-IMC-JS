@@ -1,3 +1,7 @@
+html {
+  background-color: rgb(37, 37, 37);
+}
+
 main {
   display: flex;
   width: 100vw;

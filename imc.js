@@ -1,12 +1,12 @@
-const calcular = document.querySelector('#calcular')
+const calculate = document.querySelector('#calculate')
 
 function imc() {
-  const nome = document.querySelector('#nome').value
+  const name = document.querySelector('#name').value
   const altura = document.querySelector('#altura').value
   const peso = document.querySelector('#peso').value
   const resultado = document.querySelector('#resultado')
 
-  if (nome !== '' && altura !== '' && peso !== '') {
+  if (name !== '' && altura !== '' && peso !== '') {
     const valorIMC = (peso / (altura * altura)).toFixed(1)
 
     let classificacao = ''
@@ -25,10 +25,10 @@ function imc() {
       classificacao = 'Obesidade grau III.'
     }
 
-    resultado.textContent = `${nome} seu IMC é ${valorIMC} e você está ${classificacao}`
+    resultado.textContent = `${name} seu IMC é ${valorIMC} e você está ${classificacao}`
   } else {
     resultado.textContent = 'Preencha todos os campos!'
   }
 }
 
-calcular.addEventListener('click', imc)
+calculate.addEventListener('click', imc)
