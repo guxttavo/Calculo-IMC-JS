@@ -1,7 +1,7 @@
 ## CALCULADORA IMC
 
 ```
-Usuário irá inserir seu nome peso e altura, e a partir das informações fornecida a calculadora
+Usuário irá inserir seu nome peso e altura, e a partir das informações fornecidas a calculadora
 irá dizer seu IMC e sua situação.
 
 ```
