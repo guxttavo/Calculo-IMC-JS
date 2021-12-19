@@ -2,32 +2,32 @@ const calculate = document.querySelector('#calculate')
 
 function imc() {
   const name = document.querySelector('#name').value
-  const altura = document.querySelector('#altura').value
-  const peso = document.querySelector('#peso').value
-  const resultado = document.querySelector('#resultado')
+  const height = document.querySelector('#height').value
+  const weight = document.querySelector('#weight').value
+  const result = document.querySelector('#result')
 
-  if (name !== '' && altura !== '' && peso !== '') {
-    const valorIMC = (peso / (altura * altura)).toFixed(1)
+  if (name !== '' && height !== '' && weight !== '') {
+    const IMC = (weight / (height * height)).toFixed(1)
 
-    let classificacao = ''
+    let classification = ''
 
-    if (valorIMC < 18.5) {
-      classificacao = 'Abaixo do peso.'
-    } else if (valorIMC < 25) {
-      classificacao = 'Peso ideal.'
-    } else if (valorIMC < 30) {
-      classificacao = 'Levemente acima do peso.'
-    } else if (valorIMC < 35) {
-      classificacao = 'Obesidade grau I.'
-    } else if (valorIMC < 40) {
-      classificacao = 'Obesidade grau II'
+    if (IMC < 18.5) {
+      classification = 'Under the weight.'
+    } else if (IMC < 25) {
+      classification = 'Ideal weight .'
+    } else if (IMC < 30) {
+      classification = 'Slightly overweight'
+    } else if (IMC < 35) {
+      classification = 'Obesity level I'
+    } else if (IMC < 40) {
+      classification = 'Obesity level II'
     } else {
-      classificacao = 'Obesidade grau III.'
+      classification = 'Obesity level III'
     }
 
-    resultado.textContent = `${name} seu IMC é ${valorIMC} e você está ${classificacao}`
+    result.textContent = `${name} your IMC is ${IMC} and you are classificated as: ${classification}`
   } else {
-    resultado.textContent = 'Preencha todos os campos!'
+    result.textContent = 'All the fields must be filled in!'
   }
 }
 
